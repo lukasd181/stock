@@ -9,12 +9,13 @@ from hashlib import md5
 from time import sleep
 from json import loads
 from flask_cors import CORS
+from config import MONGO_USERNAME, MONGO_PASSWORD
 
 app = Flask(__name__)
 api = Api(app)
 CORS(app)
 
-client = MongoClient("mongodb+srv://hungduonggia181:Tiberiumwars123@summerproject.sgjfjf9.mongodb.net/?retryWrites=true&w=majority")
+client = MongoClient(f"mongodb+srv://{MONGO_USERNAME}:{MONGO_PASSWORD}@summerproject.sgjfjf9.mongodb.net/?retryWrites=true&w=majority")
 db = client["stock-data"]
 
 

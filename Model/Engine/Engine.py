@@ -13,13 +13,14 @@ from Components.DispatcherStore import DispatcherStore
 from config import API_KEY
 from time import sleep
 import pymongo
+from config import MONGO_USERNAME, MONGO_PASSWORD
 
 class Engine(Thread):
     def __init__(self, symbol: str):
         self.plot_path = "../stock_web/src/forecast_image"
         self.n_lookback = 60  # length of input sequences (lookback period)
         self.n_forecast = 30  # length of output sequences (forecast period)
-        client = pymongo.MongoClient("mongodb+srv://hungduonggia181:Tiberiumwars123@summerproject.sgjfjf9.mongodb.net/?retryWrites=true&w=majority")
+        client = pymongo.MongoClient(f"mongodb+srv://{MONGO_USERNAME}:{MONGO_PASSWORD}@summerproject.sgjfjf9.mongodb.net/?retryWrites=true&w=majority")
         db = client["stock-data"]
         self.db_collection = db[f"forecast-{symbol}"]
         self.stock = None
