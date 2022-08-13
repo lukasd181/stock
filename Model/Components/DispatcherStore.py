@@ -14,6 +14,14 @@ class DispatcherStore:
         return DispatcherConsumer(ip_address=ip_address, port=port, topic="Polygon", key=key, callback=callback)
 
     @staticmethod
+    def createHistoricalDataProducer(key: str, ip_address=IP_ADDRESS, port=PORT):
+        return DispatcherProducer(ip_address=ip_address, port=port, topic="HistoricalData", key=key)
+
+    @staticmethod
+    def createHistoricalDataConsumer(key: str, callback, ip_address=IP_ADDRESS, port=PORT):
+        return DispatcherConsumer(ip_address=ip_address, port=port, topic="HistoricalData", key=key, callback=callback)
+
+    @staticmethod
     def createHistoricalSignalProducer(key: str, ip_address=IP_ADDRESS, port=PORT):
         return DispatcherProducer(ip_address=ip_address, port=port, topic="HistoricalSignal", key=key)
 
@@ -37,3 +45,10 @@ class DispatcherStore:
     def createModelConsumer(key: str, callback, ip_address=IP_ADDRESS, port=PORT):
         return DispatcherConsumer(ip_address=ip_address, port=port, topic="Model", key=key, callback=callback)
 
+    @staticmethod
+    def createSignalAfterForecastProducer(key: str, ip_address=IP_ADDRESS, port=PORT):
+        return DispatcherProducer(ip_address=ip_address, port=port, topic="Forecasting", key=key)
+
+    @staticmethod
+    def createSignalAfterForecastConsumer(key: str, callback, ip_address=IP_ADDRESS, port=PORT):
+        return DispatcherConsumer(ip_address=ip_address, port=port, topic="Forecasting", key=key, callback=callback)

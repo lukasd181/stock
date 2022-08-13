@@ -1,0 +1,120 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: flex-start;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.stock-card {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  height: 800px;
+}
+
+.stock-holder{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.stock-main-container{
+  margin-left: 10px;
+  margin: 10px;
+  height: 500px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.stock-container-uppper{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 200px;
+}
+
+.stock-container-lower{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height:600px;
+}
+
+.stock-container-label{
+  justify-content: center;
+  align-self: center;
+}
+
+.stock-container-button-area{
+  justify-content: center;
+  align-self: center;
+}
+
+.stock-container-stats{
+  display:flex;
+  width: 400px;
+  justify-content: space-around;
+}
+.stock-container-graph{
+  display:flex;
+  width:400px;
+  justify-content: space-around;
+  
+}
+
+.stock-stats{
+  display:flex;
+  flex-direction: row;
+}
+
+.stats-holder{
+  display:flex;
+  flex-direction: column;
+
+}
+
+.stock-stats-text{
+  font-size: 10px;
+}
+
+
+
